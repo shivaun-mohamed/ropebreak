@@ -1,0 +1,36 @@
+
+class Wrestler:
+
+    def __init__(self, name, height, weight, wrestler_type, moveset, static_stats, dynamic_stats):
+        self.name = name
+        self.height = height
+        self.weight = weight
+        self.wrestler_type = wrestler_type
+        self.moveset = moveset
+        self.static_stats = static_stats
+        self.dynamic_stats = dynamic_stats
+
+    def get_name (self) -> str:
+        return self.name
+
+    def get_height (self) -> int:
+        return self.height
+
+    def convert_height (self) -> float:
+        self.height_ft = self.height * 3.28084
+        return self.height_ft
+
+    def get_wrestler_type (self) -> str:
+        return self.wrestler_type
+
+    def get_moveset (self) -> list:
+        return self.moveset
+
+    def get_static_stats (self) -> dict:
+        return self.static_stats
+
+    def get_dynamic_stats (self) -> dict:
+        return self.dynamic_stats
+    
+    
+
