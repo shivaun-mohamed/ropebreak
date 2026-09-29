@@ -1,0 +1,48 @@
+# How to Design Data (HTDD)
+
+## 1. Data Definition
+
+A Wrestler is a compound data structure made up of the following fields:
+
+| Field | Type |
+| ----- | ---- |
+| name  | String |
+| height | Float |
+| weight | Float |
+| wrestler-type | List of strings (primary and secondary) (well-balanced, brawler, grappler, mat technician, high flyer, rule breaker). Wrestler type will determine moveset. |
+| moveset | List of Strings. Wrestler's signature moves (finisher included)
+| static-stats | Dictionary of String : Float (keys: strength, speed, durability, counter, charisma, submission, aerial ability) |
+| dynamic-stats | Dictionary (see below for breakdown) |
+
+### wrestler-type breakdown:
+
+| Field | Description |
+| ----- | ---- |
+| well-balanced | Does not rely on single dominant techniques. Well-balanced wrestlers are effective in all ways of fighting. Does not have any affect on stats | 
+| brawler | Relies on hard hits, strength and brute force. Brawlers typically have high durability and strength, but low aerial ability and submission stats. |
+| grappler | Coming soon...
+
+### moveset breakdown:
+
+| Field | Type |
+| ----- | ---- |
+| well-balanced | list of strings |
+etc
+
+
+### static-stats description:
+
+| Field | Type |
+| ----- | ---- |
+| Strength | Wrestler's power. Wrestlers with high strength are more effective against wrestler's with low strength. Wrestlers with high strength often struggle against wrestlers with high counter, speed, and submission. |
+
+### dynamic-stats breakdown:
+
+| Field | Type |
+| ----- | ---- |
+| Health | Float |
+| Fatigue | Float |
+| Morale | String: confident, nervous, rattled, furious, demoralized |
+| Momentum | Boolean |
+| Archetype | String: heel, tweener, babyface |
+| injury status | Dictionary of String: String - see breakdown below |
