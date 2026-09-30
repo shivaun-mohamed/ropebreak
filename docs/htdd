@@ -14,13 +14,18 @@ A Wrestler is a compound data structure made up of the following fields:
 | static-stats | Dictionary of String : Float (keys: strength, speed, durability, counter, charisma, submission, aerial ability) |
 | dynamic-stats | Dictionary (see below for breakdown) |
 
-### wrestler-type breakdown:
+### wrestler-type breakdown: 
+
+(UPDATE NOTE: make description, strengths, weaknesses, stats modifier column)
 
 | Field | Description |
 | ----- | ---- |
-| well-balanced | Does not rely on single dominant techniques. Well-balanced wrestlers are effective in all ways of fighting. Does not have any affect on stats | 
-| brawler | Relies on hard hits, strength and brute force. Brawlers typically have high durability and strength, but low aerial ability and submission stats. |
-| grappler | Coming soon...
+| well-balanced | Does not rely on a single dominant fighting technique (e.g., no heavy preference). Well-balanced wrestlers are effective in all ways of fighting. All static-stat weights are 1.0. Has neutral generic moveset. | 
+| brawler | Stat Allocation: High Durability (1.75) and moderately high Speed (1.5); moderate Strength (1.25); low Submission (0.5). Brawlers are optimized for aggressive, standing pressure. Their higher Speed works well against mid-low level counters. Their maximum Durability lets them absorb massive punishment and recover stamina rapidly. However, they suffer from weak grapple damage and terrible ground defense. |
+| grappler | Stat Allocation: High Strength (1.75), high durability (1.5), low speed (0.5), low counter (0.75). Grapplers use strength to inflict heavy slams, holds, suplexes, throws, etc. |
+| mat technician | High submission (2.0), high counter (1.75). Mid speed (1.0). Low aerial ability (0.5). Can reverse almost anything thrown at them. Effective in ground duels. Struggle if forced to stand up and fight. |
+| high-flyer | Stat Allocation: High speed (2.0), high aerial ability (2.0). Low strength (0.5), low durability (0.75). High flyers move fast, prioritizing turnbuckle moves. |
+| rule-breaker | Stat Allocation: High charisma (2.0), balanced counter and physical attributes (1.0). Rule breakers do a lot of dirty moves to try and win. Physically similar to well-balanced but weak against them. |
 
 ### moveset breakdown:
 
