@@ -16,16 +16,14 @@ A Wrestler is a compound data structure made up of the following fields:
 
 ### wrestler-type breakdown: 
 
-(UPDATE NOTE: make description, strengths, weaknesses, stats modifier column)
-
-| Field | Description |
-| ----- | ---- |
-| well-balanced | Does not rely on a single dominant fighting technique (e.g., no heavy preference). Well-balanced wrestlers are effective in all ways of fighting. All static-stat weights are 1.0. Has neutral generic moveset. | 
-| brawler | Stat Allocation: High Durability (1.75) and moderately high Speed (1.5); moderate Strength (1.25); low Submission (0.5). Brawlers are optimized for aggressive, standing pressure. Their higher Speed works well against mid-low level counters. Their maximum Durability lets them absorb massive punishment and recover stamina rapidly. However, they suffer from weak grapple damage and terrible ground defense. |
-| grappler | Stat Allocation: High Strength (1.75), high durability (1.5), low speed (0.5), low counter (0.75). Grapplers use strength to inflict heavy slams, holds, suplexes, throws, etc. |
-| mat technician | High submission (2.0), high counter (1.75). Mid speed (1.0). Low aerial ability (0.5). Can reverse almost anything thrown at them. Effective in ground duels. Struggle if forced to stand up and fight. |
-| high-flyer | Stat Allocation: High speed (2.0), high aerial ability (2.0). Low strength (0.5), low durability (0.75). High flyers move fast, prioritizing turnbuckle moves. |
-| rule-breaker | Stat Allocation: High charisma (2.0), balanced counter and physical attributes (1.0). Rule breakers do a lot of dirty moves to try and win. Physically similar to well-balanced but weak against them. |
+| Field | Description | Strengths | Weaknesses | Stat Allocation |
+| :--- | :--- | :--- | :--- | :--- |
+| well-balanced | Does not rely on a single dominant fighting technique. | Versatile, adapts well to different opponents | Vulnerable to all opponents. Because of no specialization, there will be times when they play to opponents strengths | Balanced across all stats (**1.0**) |
+| brawler | Brawlers are optimized for aggressive, standing pressure. They love to strike. | Brawlers are effective against rule-breakers, high-flyers, and well-balanced wrestlers. | Brawlers struggle against mat technicians, grapplers, rule-breakers, and well-balanced wrestlers. | Strength (**1.25**), Speed (**1.25**), Durability (**1.75**),  Counter (**0.75**), Charisma (**1.0**), Submission (**0.5**), Aerial Ability (**0.5**).|
+| grappler | Grapplers use strength to inflict heavy slams, holds, suplexes, throws, etc. | Grapplers are effective against brawlers, rule-breakers, and well-balanced wrestlers. | Grapplers struggle against mat technicians, high-flyers, rule-breakers, and well-balanced wrestlers. | Strength (**1.75**), Speed (**0.5**), Durability (**1.5**),  Counter (**1.75**), Charisma (**0.75**), Submission (**0.5**), Aerial Ability (**0.25**). |
+| mat technician | Mat technicians specialize in technical wrestling: using submission holds, counters, targeting body parts and understanding in-ring psychology. | Mat technicians are effective against brawlers, grapplers, well-balanced wrestlers, and rule-breakers. | Mat technicians struggle against high-flyers, rule-breakers, and well-balanced wrestlers | Strength (**1.0**), Speed (**0.75**), Durability (**1.0**),  Counter (**1.5**), Charisma (**0.75**), Submission (**1.75**), Aerial Ability (**0.25**). |
+| high-flyer | High flyers are agile and move fast, prioritizing turnbuckle moves. | High-flyers are effective against grapplers, mat-technicians, rule-breakers, and well-balanced wrestlers. | High-flyers struggle against brawlers, rule-breakers, and well-balanced wrestlers. | Strength (**0.75**), Speed (**1.75**), Durability (**0.5**),  Counter (**0.75**), Charisma (**1.0**), Submission (**0.5**), Aerial Ability (**1.75**). |
+| rule-breaker | Rule-breakers will do anything to win. Even if that means not playing by the rules. | Rule-breakers are effective against all types. | Rule-breakers struggle against all types. | Strength (**1.0**), Speed (**1.0**), Durability (**1.0**),  Counter (**1.0**), Charisma (**1.0**), Submission (**1.0**), Aerial Ability (**1.0**). |
 
 ### moveset breakdown:
 
@@ -51,3 +49,7 @@ etc
 | Momentum | Boolean |
 | Archetype | String: heel, tweener, babyface |
 | injury status | Dictionary of String: String - see breakdown below |
+
+## Planned Features:
+
+- Type advantage as a tiebreaker / edge-case for close statistical matchups (not yet implemented)
