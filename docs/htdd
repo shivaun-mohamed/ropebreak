@@ -16,7 +16,7 @@ A Wrestler is a compound data structure made up of the following fields:
 
 ### wrestler-type breakdown: 
 
-| Field | Description | Strengths | Weaknesses | Stat Allocation |
+| Wrestler-Type | Description | Strengths | Weaknesses | Stat Allocation |
 | :--- | :--- | :--- | :--- | :--- |
 | well-balanced | Does not rely on a single dominant fighting technique. | Versatile, adapts well to different opponents | Vulnerable to all opponents. Because of no specialization, there will be times when they play to opponents strengths | Balanced across all stats (**1.0**) |
 | brawler | Brawlers are optimized for aggressive, standing pressure. They love to strike. | Brawlers are effective against rule-breakers, high-flyers, and well-balanced wrestlers. | Brawlers struggle against mat technicians, grapplers, rule-breakers, and well-balanced wrestlers. | Strength (**1.25**), Speed (**1.25**), Durability (**1.75**),  Counter (**0.75**), Charisma (**1.0**), Submission (**0.5**), Aerial Ability (**0.5**).|
@@ -27,7 +27,7 @@ A Wrestler is a compound data structure made up of the following fields:
 
 ### moveset breakdown:
 
-| Field | Type |
+| Wrestler-Type | Moves |
 | ----- | ---- |
 | well-balanced | list of strings |
 etc
@@ -37,7 +37,15 @@ etc
 
 | Field | Type |
 | ----- | ---- |
-| Strength | Wrestler's power. Wrestlers with high strength are more effective against wrestler's with low strength. Wrestlers with high strength often struggle against wrestlers with high counter, speed, and submission. |
+| Strength | Wrestler's power when attacking other wrestlers. |
+| Speed | Wrestler's reaction speed, agility, change of direction, and how fast they move when performing moves, counters, etc. |
+| Durability | Wrestler's longevity in the match and how easily their body breaks down, how many hits they can take. Affects dynamic stat (fatigue, injury status). |
+| Counter | Wrestler's ability to reverse or stop moves by the opponent. | 
+| Charisma | Wrestler's ability to draw a reaction from the crowd, can impact their dynamic stats (morale, momentum). |
+| Submission | Wrestler's ability to commit and break out of submission holds. | 
+| Aerial Ability | Wrestler's ability to commit effective moves in the air. |
+
+
 
 ### dynamic-stats breakdown:
 
@@ -47,9 +55,9 @@ etc
 | Fatigue | Float |
 | Morale | String: confident, nervous, rattled, furious, demoralized |
 | Momentum | Boolean |
-| Archetype | String: heel, tweener, babyface |
 | injury status | Dictionary of String: String - see breakdown below |
 
 ## Planned Features:
 
 - Type advantage as a tiebreaker / edge-case for close statistical matchups (not yet implemented)
+- Dynamic stat archetype (heel, tweener, babyface) will have an affect on crowd reaction and temporary stat boosts (not yet implemented)
