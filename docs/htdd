@@ -35,6 +35,8 @@ etc
 
 ### static-stats description:
 
+This is a separate lookup, not a field on wrestler
+
 | Field | Type |
 | ----- | ---- |
 | Strength | Wrestler's power when attacking other wrestlers. |
@@ -46,7 +48,6 @@ etc
 | Aerial Ability | Wrestler's ability to commit effective moves in the air. |
 
 
-
 ### dynamic-stats breakdown:
 
 | Field | Type |
@@ -56,6 +57,18 @@ etc
 | Morale | String: confident, nervous, rattled, furious, demoralized |
 | Momentum | Boolean |
 | injury status | Dictionary of String: String - see breakdown below |
+
+### morale-effects breakdown:
+
+This is a separate lookup, not a field on wrestler
+
+| Morale | Effect |
+| ----- | ---- |
+| Normal | Damage *= 1.0, Mistake *= 1.0 |
+| Confident | Damage *= 1.5, Mistake *= 1.25 |
+| Nervous | Damage *= 0.75, Mistake *= 1.75 |
+| Furious | Damage *= 1.75, Mistake *= 1.75 |
+| Demoralized | Damage *= 0.5, Mistake *= 1.75 |
 
 ## Planned Features:
 
