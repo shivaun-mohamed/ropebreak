@@ -7,9 +7,13 @@ ROPEBREAK is a wrestling simulator using wrestler stats and randomness to determ
 ### Features:
 
 ### Planned Features:
-- Choice of match type
 - Choice of wrestlers
 - Create a wrestler
+- Choice of match type
+- Move sequencing in commentary to provide better match flow
+- Commentary to reflect different match types (including weapons, number of participants, etc)
+- Program memory (i.e., current champions, previous champions, match records, in royal rumbles, we should be able to commentate fast and remember multiple things at once, etc)
+- Save and Load functions
 
 ## Visuals
 

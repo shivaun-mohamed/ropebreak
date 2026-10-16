@@ -27,11 +27,156 @@ A Wrestler is a compound data structure made up of the following fields:
 
 ### moveset breakdown:
 
-| Wrestler-Type | Moves |
-| ----- | ---- |
-| well-balanced | list of strings |
-etc
+#### Overview
 
+Each wrestler type has 15 generic move assignments.
+
+#### Classification Key
+
+| Category | Definition |
+|---|---|
+| Striking | A punch, kick, elbow, knee, clothesline, or similar impact attack. |
+| Grappling | A throw, slam, takedown, or manipulation of the opponent. |
+| Submission | A maintained hold used for submission attempts or wear-down effects. |
+| Pinning | A maneuver primarily intended to trap the opponent in a pin. |
+| Weapon attack | An attack using an external object. |
+
+Additional descriptors:
+- Standing: performed against a standing opponent.
+- Running: performed with a running approach.
+- Grounded opponent: performed against an opponent on the mat.
+- Rear: performed from behind the opponent.
+- Corner: performed in or from a corner.
+- Aerial: performed by jumping or diving from an elevated position.
+- Illegal: a move that violates the match's rules.
+- Weapon-assisted: a move incorporating a weapon or external object.
+
+A move can have more than one classification. For example:
+- Diving elbow drop: striking + aerial.
+- Northern lights suplex with bridge: grappling + pinning.
+- DDT onto a chair: grappling + weapon-assisted attack.
+
+#### 1. Well-Balanced
+
+| Move | Classification | Role |
+|---|---|---|
+| Straight punch | Striking — standing | Basic offense |
+| Toe kick | Striking — standing | Body attack and setup |
+| Backhand chop | Striking — standing | Alternative standing strike |
+| Clothesline | Striking — standing/running | Knockdown |
+| Dropkick | Striking — standing | Athletic striking option |
+| Elbow drop | Striking — grounded opponent | Follow-up attack |
+| Scoop slam | Grappling — standing | Basic slam |
+| Snap suplex | Grappling — standing | Quick throw |
+| Snapmare | Grappling — standing | Grounding the opponent |
+| Arm drag | Grappling — standing/counter | Technical takedown |
+| Neckbreaker | Grappling — standing | Head/neck-focused offense |
+| DDT | Grappling — standing | Higher-impact option |
+| Sleeper hold | Submission — rear | Wear-down/submission option |
+| Diving crossbody | Aerial grappling/body press | Attack against a standing opponent |
+| Diving elbow drop | Striking — aerial | Attack against a grounded opponent |
+
+#### 2. Brawler
+
+| Move | Classification | Role |
+|---|---|---|
+| Straight punch | Striking — standing | Basic pressure |
+| Full-swing punch | Striking — standing | Heavy strike |
+| Backhand chop | Striking — standing | Repeated standing offense |
+| Forearm smash | Striking — standing | Close-range pressure |
+| Elbow smash | Striking — standing/clinch | Close-range strike |
+| Toe kick | Striking — standing | Body attack |
+| Clothesline | Striking — standing | Knockdown |
+| Running clothesline | Striking — running | Pressure from distance |
+| Shoulder block | Striking — running | Body collision |
+| Corner shoulder thrusts | Striking — corner | Sustained corner offense |
+| Stomp | Striking — grounded opponent | Ground follow-up |
+| Ground punches | Striking — grounded opponent | Continued pressure |
+| Scoop slam | Grappling — standing | Simple power offense |
+| Sidewalk slam | Grappling — standing | Heavier slam |
+| Bulldog | Grappling — standing/running | Head-focused takedown |
+
+#### 3. Grappler
+
+| Move | Classification | Role |
+|---|---|---|
+| Scoop slam | Grappling — standing | Basic lift-and-slam |
+| High-angle scoop slam | Grappling — standing | Heavier slam variation |
+| Vertical suplex | Grappling — standing | Standard lifting throw |
+| Stalling suplex | Grappling — standing | Strength-focused throw |
+| Belly-to-back suplex | Grappling — rear | Rear-position throw |
+| German suplex | Grappling — rear | High-impact rear throw |
+| Belly-to-belly suplex | Grappling — standing | Front-position throw |
+| Powerslam | Grappling — standing/running | Power counter or slam |
+| Sidewalk slam | Grappling — standing | Side-position slam |
+| Pendulum backbreaker | Grappling — standing | Back-focused impact |
+| Rib breaker | Grappling — standing | Torso-focused impact |
+| Spinebuster | Grappling — standing | Heavy takedown |
+| Powerbomb | Grappling — standing | High-impact lift |
+| Fallaway slam | Grappling — standing | Strength-focused throw |
+| Superplex | Grappling — elevated/corner | High-impact corner option |
+
+#### 4. Mat-Technician
+
+| Move | Classification | Role |
+|---|---|---|
+| Arm drag | Grappling — standing/counter | Technical takedown |
+| Snapmare | Grappling — standing | Transition to ground control |
+| Dragon screw | Grappling — leg takedown | Leg-focused offense |
+| Shin breaker | Grappling — standing | Leg-focused impact |
+| Arm wrench with elbow stomp | Grappling + striking — limb attack | Arm-focused offense |
+| Russian leg sweep | Grappling — standing | Controlled takedown |
+| Northern lights suplex with bridge | Grappling + pinning | Throw into a pin |
+| Small package | Pinning — cradle | Opportunistic pin |
+| Backslide | Pinning — rear | Technical pin transition |
+| Armbar | Submission — arm | Arm-focused hold |
+| Reverse chinlock | Submission — grounded | Wear-down hold |
+| Sleeper hold | Submission — rear | Control/submission option |
+| Abdominal stretch | Submission — standing | Torso-focused hold |
+| Surfboard stretch | Submission — grounded | Stretching/control option |
+| Single-leg Boston crab | Submission — grounded | Leg-focused hold |
+
+#### 5. High-Flyer
+
+| Move | Classification | Role |
+|---|---|---|
+| Dropkick | Striking — standing | Basic athletic offense |
+| Spinning heel kick | Striking — standing | Rotational striking option |
+| Running head-scissors takedown | Grappling — running | Speed-based takedown |
+| Hurricanrana | Grappling — standing | Acrobatic takedown |
+| Monkey flip | Grappling — standing/corner | Launching takedown |
+| Tornado DDT | Grappling — elevated/corner | Rotational head-focused attack |
+| Missile dropkick | Striking — aerial | Diving attack against a standing opponent |
+| Diving crossbody | Aerial grappling/body press | Diving attack against a standing opponent |
+| Diving double axe handle | Striking — aerial | Simpler diving strike |
+| Diving elbow drop | Striking — aerial | Grounded-opponent attack |
+| Diving body splash | Aerial body press | Grounded-opponent attack |
+| Moonsault | Aerial body press | Advanced aerial option |
+| Shooting star press | Aerial body press | Advanced aerial option |
+| Somersault plancha | Aerial body press — ringside dive | Attack to the outside |
+| Asai moonsault | Aerial body press — apron/rope-assisted | Attack to the outside |
+
+
+#### 6. Rule-Breaker
+
+
+| Move | Classification | Role |
+|---|---|---|
+| Straight punch | Striking — standing | Ordinary offense |
+| Toe kick | Striking — standing | Ordinary setup |
+| Clothesline | Striking — standing/running | Ordinary knockdown |
+| Neckbreaker | Grappling — standing | Ordinary grapple |
+| DDT | Grappling — standing | Higher-impact ordinary offense |
+| Schoolboy roll-up | Pinning | Opportunistic pin; not inherently cheating |
+| Low blow | Striking — illegal | Exclusive cheap-shot option |
+| Eye rake | Illegal attack — raking | Disruption option |
+| Eye poke | Striking — illegal | Quick cheap shot |
+| Hair-pull slam | Grappling — illegal | Illegal takedown |
+| Grounded groin strike | Striking — illegal/grounded | Grounded cheap shot |
+| Rope-assisted choke | Illegal hold — rope-assisted | Sustained illegal pressure |
+| Chair strike | Weapon attack | Weapon offense |
+| Stick strike | Weapon attack | Alternative weapon offense |
+| DDT onto a chair | Grappling + weapon-assisted attack | Weapon-assisted impact |
 
 ### static-stats description:
 
