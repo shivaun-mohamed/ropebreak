@@ -20,7 +20,7 @@ A Wrestler is a compound data structure made up of the following fields:
 |  ----- |  ----- |
 | Metres (m) | Pounds (lb) |
 
-- Static stat scale: 0-10 in 0.25 increments
+Static stat scale: 0-10 in 0.25 increments
 
 | Dynamic Stats | Description |
 |  ------------ | ----------- |
@@ -34,9 +34,9 @@ A Wrestler is a compound data structure made up of the following fields:
 | Wrestler-Type | Description | Strengths | Weaknesses | Stat Allocation |
 | :--- | :--- | :--- | :--- | :--- |
 | well-balanced | Does not rely on a single dominant fighting technique. | Versatile, adapts well to different opponents | Vulnerable to all opponents. Because of no specialization, there will be times when they play to opponents strengths | Balanced across all stats (**1.0**) |
-| brawler | Brawlers are optimized for aggressive, standing pressure. They love to strike. | Brawlers are effective against rule-breakers, high-flyers, and well-balanced wrestlers. | Brawlers struggle against mat technicians, grapplers, rule-breakers, and well-balanced wrestlers. | Strength (**1.25**), Speed (**1.25**), Durability (**1.75**),  Counter (**0.75**), Charisma (**1.0**), Submission (**0.5**), Aerial Ability (**0.5**).|
-| grappler | Grapplers use strength to inflict heavy slams, holds, suplexes, throws, etc. | Grapplers are effective against brawlers, rule-breakers, and well-balanced wrestlers. | Grapplers struggle against mat technicians, high-flyers, rule-breakers, and well-balanced wrestlers. | Strength (**1.75**), Speed (**0.5**), Durability (**1.5**),  Counter (**1.75**), Charisma (**0.75**), Submission (**0.5**), Aerial Ability (**0.25**). |
-| mat-technician | Mat technicians specialize in technical wrestling: using submission holds, counters, targeting body parts and understanding in-ring psychology. | Mat technicians are effective against brawlers, grapplers, well-balanced wrestlers, and rule-breakers. | Mat technicians struggle against high-flyers, rule-breakers, and well-balanced wrestlers | Strength (**1.0**), Speed (**0.75**), Durability (**1.0**),  Counter (**1.5**), Charisma (**0.75**), Submission (**1.75**), Aerial Ability (**0.25**). |
+| brawler | Brawlers are optimized for aggressive, standing pressure. They love to strike. | Brawlers are effective against rule-breakers, high-flyers, and well-balanced wrestlers. | Brawlers struggle against mat-technicians, grapplers, rule-breakers, and well-balanced wrestlers. | Strength (**1.25**), Speed (**1.25**), Durability (**1.75**),  Counter (**0.75**), Charisma (**1.0**), Submission (**0.5**), Aerial Ability (**0.5**).|
+| grappler | Grapplers use strength to inflict heavy slams, holds, suplexes, throws, etc. | Grapplers are effective against brawlers, rule-breakers, and well-balanced wrestlers. | Grapplers struggle against mat-technicians, high-flyers, rule-breakers, and well-balanced wrestlers. | Strength (**1.75**), Speed (**0.5**), Durability (**1.5**),  Counter (**1.75**), Charisma (**0.75**), Submission (**0.5**), Aerial Ability (**0.25**). |
+| mat-technician | Mat-technicians specialize in technical wrestling: using submission holds, counters, targeting body parts and understanding in-ring psychology. | Mat-technicians are effective against brawlers, grapplers, well-balanced wrestlers, and rule-breakers. | Mat-technicians struggle against high-flyers, rule-breakers, and well-balanced wrestlers | Strength (**1.0**), Speed (**0.75**), Durability (**1.0**),  Counter (**1.5**), Charisma (**0.75**), Submission (**1.75**), Aerial Ability (**0.25**). |
 | high-flyer | High flyers are agile and move fast, prioritizing turnbuckle moves. | High-flyers are effective against grapplers, mat-technicians, rule-breakers, and well-balanced wrestlers. | High-flyers struggle against brawlers, rule-breakers, and well-balanced wrestlers. | Strength (**0.75**), Speed (**1.75**), Durability (**0.5**),  Counter (**0.75**), Charisma (**1.0**), Submission (**0.5**), Aerial Ability (**1.75**). |
 | rule-breaker | Rule-breakers will do anything to win. Even if that means not playing by the rules. | Rule-breakers are effective against all types. | Rule-breakers struggle against all types. | Strength (**1.0**), Speed (**1.0**), Durability (**1.0**),  Counter (**1.0**), Charisma (**1.0**), Submission (**1.0**), Aerial Ability (**1.0**). |
 
@@ -51,7 +51,7 @@ Each wrestler type has 15 generic move assignments.
 - Each wrestler's moveset contains their signature moves, with the finisher listed last. Each signature-move entry stores the move name together with its classification, plus a list of target body parts when applicable.
 - A move may target more than one body part. Target body parts are recorded separately from classification.
 - Generic moves are available regardless of momentum. Signature moves, including the finisher, are available only when the wrestler's momentum is true.
-- Three successful moves in a row unlock signature moves by setting momentum to true. Any opponent action interrupts the streak before the unlock and resets its count.
+- Three successful moves in a row unlock signature moves by setting momentum to true. An opponent's counter interrupts the streak before the unlock and resets its count.
 - Using a signature move does not reset momentum. Momentum remains true until the wrestler has used all of their signature moves or the opponent counters one of their moves.
 - Each time momentum is unlocked, all of the wrestler's signature moves are available for that cycle. If momentum ends early because of a counter, the next unlock starts a fresh cycle with all signature moves available again.
 - In v0, move classifications are used only to guide commentary. They do not otherwise affect move selection or match simulation.
@@ -226,13 +226,6 @@ Examples:
 | Momentum | Boolean |
 | injury status | Dictionary of String: String - see breakdown below |
 | injury target count | Dictionary of String: Integer - cumulative targeted-move count for each body part |
-
-### match-state breakdown:
-
-| Field | Type | Description |
-| ----- | ---- | ----------- |
-| consecutive move count | Integer per wrestler | Counts successful moves in a row toward unlocking signature moves. Starts at 0, resets when interrupted before unlock, and reaching 3 sets momentum to true. Resets to 0 when the momentum cycle ends. |
-| signature moves used | List of Strings per wrestler | Names of signature moves used during the current momentum cycle. Starts empty when momentum unlocks and resets when the cycle ends. |
 
 ### morale-effects breakdown:
 
