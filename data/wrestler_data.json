@@ -1,0 +1,156 @@
+{
+    "wrestlers": [
+        {
+            "name": "Andre the Giant",
+            "height": 2.24,
+            "weight": 520,
+            "wrestler-type": ["grappler", "brawler"],
+            "moveset": [
+                {"name": "Bearhug", "classification": "Submission (Standing)", "target body parts": ["Torso"]},
+                {"name": "Giant Splash", "classification": "Pinning (Grounded Opponent)", "target body parts": ["Torso"]},
+                {"name": "Big Boot", "classification": "Striking (Standing)", "target body parts": ["Head"]}
+            ],
+            "static-stats": {
+                "strength":10.0,
+                "speed":5.0,
+                "durability":8.25,
+                "counter":6.75,
+                "charisma":8.75,
+                "submission":6.50,
+                "aerial ability":1.25
+            },
+            "dynamic-stats": {
+                "health": 100.0,
+                "stamina": 100.0,
+                "morale": "normal",
+                "momentum": false,
+                "injury status": {
+                    "Head": "Healthy",
+                    "Arms": "Healthy",
+                    "Legs": "Healthy",
+                    "Torso": "Healthy"
+                },
+                "injury target count": {
+                    "Head": 0,
+                    "Arms": 0,
+                    "Legs": 0,
+                    "Torso": 0
+                }
+            }
+        },
+        {
+            "name": "Batista",
+            "height": 1.98,
+            "weight": 290.0,
+            "wrestler-type": ["grappler", "brawler"],
+            "moveset": [
+                {"name": "Spinebuster", "classification": "Grappling", "target body parts": ["Torso"]},
+                {"name": "The Spear", "classification": "Striking (Running)", "target body parts": ["Torso"]},
+                {"name": "Batista Bomb", "classification": "Grappling", "target body parts": ["Torso"]}
+            ],
+            "static-stats": {
+                "strength": 9.75,
+                "speed": 7.0,
+                "durability": 7.0,
+                "counter": 7.25,
+                "charisma": 8.0,
+                "submission": 5.5,
+                "aerial ability": 3.5
+            },
+            "dynamic-stats": {
+                "health": 100.0,
+                "stamina": 100.0,
+                "morale": "normal",
+                "momentum": false,
+                "injury status": {
+                "Head": "Healthy",
+                "Arms": "Healthy",
+                "Legs": "Healthy",
+                "Torso": "Healthy"
+                },
+                "injury target count": {
+                "Head": 0,
+                "Arms": 0,
+                "Legs": 0,
+                "Torso": 0
+                }
+            }
+        },
+        {
+            "name": "Bret 'The Hitman' Hart",
+            "height": 1.83,
+            "weight": 235.0,
+            "wrestler-type": ["mat-technician", "well-balanced"],
+            "moveset": [
+                {"name": "Inverted Atomic Drop", "classification": "Grappling", "target body parts": ["Legs"]},
+                {"name": "Pendulum Backbreaker", "classification": "Grappling", "target body parts": ["Torso"]},
+                {"name": "The Sharpshooter", "classification": "Submission (Grounded opponent)", "target body parts": ["Legs"]}
+            ],
+            "static-stats": {
+                "strength": 7.75,
+                "speed": 7.5,
+                "durability": 9.25,
+                "counter": 10.0,
+                "charisma": 8.0,
+                "submission": 10.0,
+                "aerial ability": 6.0
+            },
+            "dynamic-stats": {
+                "health": 100.0,
+                "stamina": 100.0,
+                "morale": "normal",
+                "momentum": false,
+                "injury status": {
+                "Head": "Healthy",
+                "Arms": "Healthy",
+                "Legs": "Healthy",
+                "Torso": "Healthy"
+                },
+                "injury target count": {
+                "Head": 0,
+                "Arms": 0,
+                "Legs": 0,
+                "Torso": 0
+                }
+            }
+        },
+        {
+            "name": "Eddie Guerrero",
+            "height": 1.73,
+            "weight": 225.0,
+            "wrestler-type": ["mat-technician", "rule-breaker"],
+            "moveset": [
+                {"name": "Gory Special", "classification": "Grappling + Submission", "target body parts": ["Torso"]},
+                {"name": "Lasso from El Paso", "classification": "Submission", "target body parts": ["Legs"]},
+                {"name": "Frog Splash", "classification": "Striking (Aerial)", "target body parts": ["Torso"]}
+            ],
+            "static-stats": {
+                "strength": 7.75,
+                "speed": 8.0,
+                "durability": 6.75,
+                "counter": 9.25,
+                "charisma": 10.0,
+                "submission": 9.0,
+                "aerial ability": 9.0
+            },
+            "dynamic-stats": {
+                "health": 100.0,
+                "stamina": 100.0,
+                "morale": "normal",
+                "momentum": false,
+                "injury status": {
+                "Head": "Healthy",
+                "Arms": "Healthy",
+                "Legs": "Healthy",
+                "Torso": "Healthy"
+                },
+                "injury target count": {
+                "Head": 0,
+                "Arms": 0,
+                "Legs": 0,
+                "Torso": 0
+                }
+            }
+        }   
+    ]
+}
