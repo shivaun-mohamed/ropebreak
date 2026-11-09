@@ -1,4 +1,17 @@
+# Pre-Match State
+
+
 ## Frontend:
+
+### Responsibilities:
+- Show available match types for user to choose from (in v0, just singles)
+- Display prompts that guide user through match type and wrestler selection, including confirmation prompts
+- Show roster of wrestlers, with their names and IDs
+- Get user's wrestler choice by name or roster number and provide feedback for invalid choices
+- Display a selected wrestler's information, such as height, weight, type, and stats
+- Validity check to make sure same wrestler is not chosen for both sides (once a wrestler is selected by user, they can not be selected again)
+
+
 
 Signature:
 get_primary_match_type: MatchData -> List[String]
@@ -13,6 +26,8 @@ Template:
 - Get full list of primary match type from match_data from MatchData input
 - Return full list
 
+
+
 Signature:
 get_secondary_match_type: MatchData -> List[String]
 
@@ -26,18 +41,36 @@ Template:
 - Get full list of secondary match types from MatchData input
 - Return full list
 
-<!-- Signature:
-display_match_type: get_primary_match_type, get_secondary_match_type -> string
+
+
+Signature:
+display_primary_match_type: List[String] -> String
 
 Purpose:
-Show the different types of wrestling matches available to the user
+Create and return one display string containing the primary match types, with each type on its own line
 
 Examples:
-- display_match_type([singles, normal]) -> "Singles", "Normal"
-- display_match_type([tagteam, tornado]) -> "Tag team", "Tornado"
-- display_match_type([triplethreat, hellinacell]) -> "Triple Threat", "Hell in a Cell"
+- Given ["Singles"], return "Singles"
+- Given ["Singles", "Tag Team"], return "Singles\nTag Team"
 
 Template:
-- Call getter get_primary_match_types
-- Display get_primary_match_types output to user -->
+- Go through each match type in input list
+- Combine their names into one string, with each name on a new line
+- Return the string
 
+
+
+Signature:
+display_secondary_match_type: List[String] -> String
+
+Purpose:
+Create and return one display string containing the secondary match types, with each type on its own line
+
+Examples:
+- Given ["Normal"], return "Normal"
+- Given ["Normal", "Submission", "TLC"], return "Normal\nSubmission\nTLC"
+
+Template:
+- Go through each match type in input list
+- Combine their names into one string, with each name on a new line
+- Return the string

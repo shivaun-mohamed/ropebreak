@@ -2,6 +2,7 @@
     "wrestlers": [
         {
             "name": "Andre the Giant",
+            "id": 1,
             "height": 2.24,
             "weight": 520,
             "wrestler-type": ["grappler", "brawler"],
@@ -40,6 +41,7 @@
         },
         {
             "name": "Batista",
+            "id": 2,
             "height": 1.98,
             "weight": 290.0,
             "wrestler-type": ["grappler", "brawler"],
@@ -78,6 +80,7 @@
         },
         {
             "name": "Bret 'The Hitman' Hart",
+            "id": 3,
             "height": 1.83,
             "weight": 235.0,
             "wrestler-type": ["mat-technician", "well-balanced"],
@@ -116,6 +119,7 @@
         },
         {
             "name": "Eddie Guerrero",
+            "id": 4,
             "height": 1.73,
             "weight": 225.0,
             "wrestler-type": ["mat-technician", "rule-breaker"],
