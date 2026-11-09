@@ -155,6 +155,45 @@
                 "Torso": 0
                 }
             }
+        },
+        {
+            "name": "Rey Mysterio",
+            "id": 5,
+            "height": 1.68,
+            "weight": 175.0,
+            "wrestler-type": ["high-flyer"],
+            "moveset": [
+                {"name": "619", "classification": "Striking (Running)", "target body parts": ["Head"]},
+                {"name": "West Coast Pop", "classification": "Grappling + Aerial", "target body parts": ["Torso"]},
+                {"name": "Droppin' Da Dime", "classification": "Striking (Aerial)", "target body parts": ["Head"]}
+            ],
+            "static-stats": {
+                "strength": 5.0,
+                "speed": 10.0,
+                "durability": 8.5,
+                "counter": 9.0,
+                "charisma": 8.25,
+                "submission": 7.5,
+                "aerial ability": 10.0
+            },
+            "dynamic-stats": {
+                "health": 100.0,
+                "stamina": 100.0,
+                "morale": "normal",
+                "momentum": false,
+                "injury status": {
+                    "Head": "Healthy",
+                    "Arms": "Healthy",
+                    "Legs": "Healthy",
+                    "Torso": "Healthy"
+                },
+                "injury target count": {
+                    "Head": 0,
+                    "Arms": 0,
+                    "Legs": 0,
+                    "Torso": 0
+                }
+            }
         }   
     ]
 }
