@@ -8,7 +8,7 @@
 - Display prompts that guide user through match type and wrestler selection, including confirmation prompts:
     - Choose a Match Type (Primary)
     - Choose a Match Type (Secondary)
-    - Back prompt after each selection
+    - Instructions text
     - Choose Wrestler
     - Confirm wrestlers and match confirmation
 - Show roster of wrestlers, with their names and IDs
@@ -133,6 +133,22 @@ Template:
 - Prompt user to enter wrestler name or ID from available roster
 - Read the choice
 - Check whether it matches wrestler in roster
-- If that wrestler's ID is already selected, explain and prompt again
+- If that wrestler's ID or name is already selected, explain and prompt again
+- If that wreslter's ID or name is unavailable, explain and prompt again
 - Return selected wrestler's record
 
+#### Count the number of wrestlers the user can choose based on primary match type
+
+Signature:
+get_wrestler_count: String -> Integer
+
+Purpose:
+Return number of wrestler slots required for given primary match type
+
+Examples:
+- Given "Singles", return 2
+
+Template:
+- Examine selected primary match type
+- If "Singles", return 2
+- Add a case for each other primary match type when it becomes supported
