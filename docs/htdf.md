@@ -28,14 +28,12 @@ get_primary_match_type: MatchData -> List[String]
 
 Purpose:
 Returns primary_match_type list from the given match data
-Returns primary_match_type list from the given match data
 
 Examples:
 - given match data whose primary_match_type field contains the full list, the getter returns that same list
-- given match data whose primary_match_type field contains the full list, the getter returns that same list
+
 
 Template:
-- Get full list of primary match type from match_data from MatchData input
 - Get full list of primary match type from match_data from MatchData input
 - Return full list
 
@@ -46,10 +44,8 @@ get_secondary_match_type: MatchData -> List[String]
 
 Purpose:
 Returns secondary_match_type list from the given match data
-Returns secondary_match_type list from the given match data
 
 Examples:
-- given match data whose secondary_match_type field contains the full list, the getter returns that same list
 - given match data whose secondary_match_type field contains the full list, the getter returns that same list
 
 Template:
