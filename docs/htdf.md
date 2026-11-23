@@ -8,16 +8,6 @@
 
 ### Responsibilities:
 - Show available match types for user to choose from (in v0, just singles)
-- Display prompts that guide user through match type and wrestler selection, including confirmation prompts
-- Show roster of wrestlers, with their names and IDs
-- Get user's wrestler choice by name or roster number and provide feedback for invalid choices
-- Display a selected wrestler's information, such as height, weight, type, and stats
-- Validity check to make sure same wrestler is not chosen for both sides (once a wrestler is selected by user, they can not be selected again)
-
-
-
-### Responsibilities:
-- Show available match types for user to choose from (in v0, just singles)
 - Display prompts that guide user through match type and wrestler selection, including confirmation prompts:
     - Choose a Match Type (Primary)
     - Choose a Match Type (Secondary)
