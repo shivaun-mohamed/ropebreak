@@ -37,3 +37,8 @@ def get_secondary_match_type(match_data):
     return match_data["secondary_match_type"]
 
 
+
+
+match_type = get_secondary_match_type(match_data)
+
+print(display_secondary_match_type(match_type))
